@@ -1,8 +1,8 @@
 /* eslint-disable no-empty-pattern */
-import { useState } from 'react';
+import { useState } from "react";
 
-import { DashboardContext } from './context';
-import Dashboard from './Dashboard';
+import { DashboardContext } from "./context";
+import Dashboard from "./Dashboard";
 
 export interface User {
   isSubscribed: boolean;
@@ -14,7 +14,7 @@ interface DemoProps {}
 export default function Demo({}: DemoProps) {
   const [user] = useState<User>({
     isSubscribed: true,
-    name: 'You',
+    name: "You",
   });
 
   return (
