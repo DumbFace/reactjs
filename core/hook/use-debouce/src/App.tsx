@@ -2,13 +2,18 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // eslint-disable-next-line no-undef
 
-import { FilterOutlined } from "@ant-design/icons";
-import { Badge, Button, Flex, Popover } from "antd";
-import React, { useState, memo } from "react";
+// import { FilterOutlined } from "@ant-design/icons";
+// import { Badge, Button, Popover } from "antd";
+import React, { memo, useState } from "react";
 import "./App.css";
-import { Filter } from "./components/filter";
-import { ISelectProps } from "./components/filter";
-import { StatusStudent } from "./components/filter";
+import { Filter, ISelectProps, StatusStudent } from "./components/filter";
+import Popover from "antd/es/popover";
+import Badge from "antd/es/badge";
+import Button from "antd/es/button";
+import FilterOutlined from "@ant-design/icons/lib/icons/FilterOutlined";
+// import Button from "antd/es/button/button";
+// import Badge from "antd/es/badge";
+// import Popover from "antd/es/popover";
 const initStudents: Student[] = [
   {
     name: "Nguyen An",
@@ -97,7 +102,10 @@ function App() {
           onOpenChange={handleOpenChange}
         >
           <Badge count={countFilter}>
-            <Button icon={<FilterOutlined />} type="primary"></Button>
+            <Button
+              icon={<FilterOutlined></FilterOutlined>}
+              type="primary"
+            ></Button>
           </Badge>
         </Popover>
 

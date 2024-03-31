@@ -1,9 +1,12 @@
 /* eslint-disable no-case-declarations */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Button, Space } from "antd";
-import React, { useEffect, useMemo, useState } from "react";
+// import { Button, Space } from "antd";
+import React, { useEffect, useState } from "react";
 import "./filter.style.scss";
+// import { useDebounce } from "use-debounce";
+import Button from "antd/es/button";
+import Space from "antd/es/space";
 import { useDebounce } from "use-debounce";
 
 export enum StatusStudent {
@@ -28,7 +31,7 @@ export const Filter = (props: any) => {
   const [isScholarShipSelect, setScholarShip] = useState(false);
   const [status, setStatus] = useState<Array<number>>([]);
   const [selected, setSelected] = useState<ISelectProps>();
-  const [debouce] = useDebounce(selected,1000);
+  const [debouce] = useDebounce(selected, 1000);
 
   useEffect(() => {
     filterStudent(selected);
