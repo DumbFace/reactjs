@@ -3,7 +3,7 @@
 
 import {
   ContextDasboardProps,
-  useDashboardContext
+  useDashboardContext,
 } from "./DashboardContextProvider";
 
 interface SidebarProps {}
@@ -27,5 +27,15 @@ export function Profile({}: ProfileProps) {
   const {
     user: { name },
   }: ContextDasboardProps = useDashboardContext();
-  return <div>{name}</div>;
+
+  const { clearIntervalLog } = useDashboardContext();
+  // const onStopInterval = () => {
+
+  // };
+  return (
+    <div>
+      {name}
+      <button onClick={clearIntervalLog}>Stop interval</button>
+    </div>
+  );
 }
